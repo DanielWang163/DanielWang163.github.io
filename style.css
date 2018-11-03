@@ -1,34 +1,3 @@
-h1 {
+div.a {
     text-align: center;
-    font-size: xx-large;
-    color: #24305E;
-}
-h2 {
-    font-size: xx-large;
-    color: #24305E;
-}
-h3 {
-    font-size: xx-large;
-    color: #24305E;
-}
-h4 {
-    font-size: xx-large;
-    color: #24305E;
-}
-h5 {
-    font-size: xx-large;
-    color: #24305E;
-}
-h6 {
-    font-size: xx-large;
-    color: #24305E;
-}
-p {
-    color: #24305E;
-}
-a {
-    color: #24305E;
-}
-body {
-    background-color: #A8D0E6;
 }
