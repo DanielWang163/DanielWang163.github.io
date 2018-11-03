@@ -6,9 +6,24 @@ h3,
 h4,
 h5,
 h6 {
-    text-decoration-color: White;
+    text-decoration-color: rgb(118, 214, 231);
 }
 div.a {
     text-align: center;
-    text-decoration-color: White;
+    text-decoration-color: rgb(118, 214, 231);
+}
+a:link,
+a:visited {
+    background-color: Black;
+    color: rgb(118, 214, 231);
+    padding: 0.0001px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    background-color: rgb(118, 214, 231);
+    text-decoration-color: Black;
 }
