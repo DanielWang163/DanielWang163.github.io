@@ -17,9 +17,7 @@ a:active {
     background-color: rgb(118, 214, 231);
     color: black;
 }
-h1,
-p,
-a {
+body{
     color: rgb(118, 214, 231);
 }
 body {
