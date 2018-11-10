@@ -1,11 +1,11 @@
 div.a {
     text-align: center;
-    text-decoration-color: rgb(118, 214, 231);
+    text-decoration-color: #0ec23b;
 }
 a:link,
 a:visited {
     background-color: Black;
-    color: rgb(118, 214, 231);
+    color: #0ec23b;
     padding: 0.0001px 10px;
     text-align: center;
     text-decoration: none;
@@ -14,12 +14,23 @@ a:visited {
 
 a:hover,
 a:active {
-    background-color: rgb(118, 214, 231);
+    background-color: #0ec23b;
     color: black;
 }
 body{
-    color: rgb(118, 214, 231);
+    color: #0ec23b;
 }
 body {
     background-color: black;
+}
+#myCanvas {
+    border-style: solid;
+    background-color: white;
+}
+h1 {
+    border-style: solid;
+    border-width: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 200px;
 }
