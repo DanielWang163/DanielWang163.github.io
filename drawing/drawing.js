@@ -1,10 +1,10 @@
-// // Variable
-// var x = 0;
-// x = 1;
+// Variable
+var x = 0;
+x = 1;
 
-// // Costant
-// const y = 0;
-// y = 1;
+// Costant
+const y = 0;
+y = 1;
 
 var canvas;
 var ctx;
