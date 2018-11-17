@@ -16,7 +16,6 @@ function init() {
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext("2d");
     // drawRuler(10);
-    ctx.fillRect(0,0,100,100);
     ctx.fillStyle = "red";
     ctx.fillRect(0,0,100,100);
     ctx.fillStyle = "orange";
