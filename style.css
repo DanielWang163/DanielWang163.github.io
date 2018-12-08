@@ -19,9 +19,8 @@ a:active {
 }
 body{
     color: #0ec23b;
-}
-body {
     background-color: black;
+    text-align: center;
 }
 #myCanvas {
     border-style: solid;
