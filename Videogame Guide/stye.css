@@ -1,0 +1,23 @@
+body{
+    background:url("Overwatch Wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center top;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+}
+a:link,
+a:visited {
+    color: black;
+}
+a:hover {
+    color: grey;
+}
+body {
+    font-family:Comic sans ms;
+    text-align: center;
+    background-color: rgba(255, 255, 255,);
+}
