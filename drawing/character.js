@@ -2,8 +2,8 @@
 
 var canvas;
 var ctx;
-var unit = 2.325;
-// var unit = 2;
+// var unit = 2.325;
+var unit = 2;
 
 
 window.onload = init;
