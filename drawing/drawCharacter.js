@@ -76,7 +76,7 @@ function drawLeftarm() {
     ctx.fillRect(0 * unit, 270 * unit, 40 * unit, 10 * unit);
     ctx.fillRect(0 * unit, 280 * unit, 10 * unit, 10 * unit);
     ctx.fillRect(20 * unit, 280 * unit, 10 * unit, 10 * unit);
-    ctx.fillStyle = "white";
+    ctx.fillStyle = "#B8B8B8";
     ctx.fillRect(40 * unit, 250 * unit, 10 * unit, 10 * unit);
     ctx.fillRect(50 * unit, 240 * unit, 20 * unit, 10 * unit);
     ctx.fillRect(60 * unit, 230 * unit, 30 * unit, 10 * unit);
