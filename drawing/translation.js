@@ -10,6 +10,7 @@ function init() {
     translatedRect();
     translatedCharacter();
     translatedAdidas();
+    translatedFortuneTeller();
 }
 
 function translatedRect() {
@@ -23,6 +24,6 @@ function translatedCharacter() {
     drawCharacter();
 }
 
-// function translatedAdidas() {
-//     drawAdidas();
-// }
+function translatedAdidas() {
+    drawAdidas();
+}
