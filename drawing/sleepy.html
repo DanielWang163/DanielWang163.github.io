@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <title>Scale</title>
+    <title>Drawing Of Sleepy</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <header>
-        <h1>Scale</h1>
+        <h1>Drawing Of Sleepy</h1>
     </header>
     <nav>
         <a href="alldrawings.html">Back</a>
@@ -20,10 +20,11 @@
     <footer>
 
     </footer>
+    <script src="drawSleepy.js"></script>
     <script>
         var canvas;
         var ctx;
-        var UNIT = 5;
+        var UNIT = 31;
 
 
         window.onload = init;
@@ -31,25 +32,10 @@
         function init() {
             canvas = document.getElementById("myCanvas");
             ctx = canvas.getContext("2d");
-
-            ctx.save();
-            ctx.scale(2, 2)
-            drawFortuneTeller();
-            ctx.restore();
-
-            ctx.save();
-            ctx.scale(0.1, 0.1);
-            ctx.translate(465*UNIT, 300*UNIT)
-            drawAdidas(0);
-            ctx.restore();
-
-            ctx.save()
+            drawSleepy();
+            drawRuler(1);
         }
     </script>
-    <script src="drawFortuneTeller.js"></script>
-    <script src="drawAdidas.js"></script>
-    <script src="drawCharacter.js"></script>
-    <!-- <script src="drawReaper.js"></script> -->
     <script src="ruler.js"></script>
 </body>
 
