@@ -1,16 +1,12 @@
 function drawSleepy() {
-    drawBackground();
     drawOutline();
     drawLightGreen();
+    drawDarkGreen();
     drawSkin();
+    drawMouth();
     drawBlue();
     drawWhite();
     drawEyes();
-}
-
-function drawBackground() {
-    ctx.fillStyle = "#323232"; // Dark grey
-    ctx.fillRect(0 * UNIT, 0 * UNIT, canvas.width, canvas.height);
 }
 
 function drawOutline() {
@@ -167,6 +163,19 @@ function drawLightGreen() {
     ctx.fillRect(22 * UNIT, 9 * UNIT, 1 * UNIT, 6 * UNIT);
     ctx.fillRect(21 * UNIT, 14 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(20 * UNIT, 15 * UNIT, 2 * UNIT, 1 * UNIT);
+}
+
+function drawDarkGreen() {
+    ctx.fillStyle = "#79eecc"; // Dark green
+    ctx.fillRect(22 * UNIT, 17 * UNIT, 1 * UNIT, 1 * UNIT);
+    ctx.fillRect(21 * UNIT, 18 * UNIT, 2 * UNIT, 1 * UNIT);
+    ctx.fillRect(20 * UNIT, 19 * UNIT, 4 * UNIT, 1 * UNIT);
+    ctx.fillRect(20 * UNIT, 20 * UNIT, 4 * UNIT, 1 * UNIT);
+    ctx.fillRect(22 * UNIT, 21 * UNIT, 2 * UNIT, 1 * UNIT);
+    ctx.fillRect(26 * UNIT, 22 * UNIT, 2 * UNIT, 1 * UNIT);
+    ctx.fillRect(25 * UNIT, 23 * UNIT, 3 * UNIT, 1 * UNIT);
+    ctx.fillRect(20 * UNIT, 28 * UNIT, 2 * UNIT, 1 * UNIT);
+    ctx.fillRect(21 * UNIT, 29 * UNIT, 3 * UNIT, 1 * UNIT);
 
 }
 
@@ -190,6 +199,12 @@ function drawSkin() {
     ctx.fillRect(18 * UNIT, 16 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(8 * UNIT, 17 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(14 * UNIT, 17 * UNIT, 3 * UNIT, 1 * UNIT);
+}
+
+function drawMouth() {
+    ctx.fillStyle = "#F0B1BA"; // Darker skin
+    ctx.fillRect(10 * UNIT, 17 * UNIT, 3 * UNIT, 1 * UNIT);
+
 }
 
 function drawBlue() {
@@ -235,5 +250,7 @@ function drawWhite() {
 }
 
 function drawEyes() {
-    ctx.fillstyle = "#5BB4EA"; // Darker blue
+    ctx.fillStyle = "#5BB4EA"; // Darker blue
+    ctx.fillRect(3 * UNIT, 21 * UNIT, 1 * UNIT, 1 * UNIT);
+    ctx.fillRect(14 * UNIT, 21 * UNIT, 1 * UNIT, 1 * UNIT);
 }
