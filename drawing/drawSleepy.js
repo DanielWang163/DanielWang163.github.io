@@ -125,6 +125,7 @@ function drawOutline() {
     ctx.fillRect(26 * UNIT, 15* UNIT, 1 * UNIT, 7 * UNIT);
     ctx.fillRect(24 * UNIT, 19 * UNIT, 1 * UNIT, 3 * UNIT);
     ctx.fillRect(22 * UNIT, 15 * UNIT, 1 * UNIT, 1 * UNIT);
+    ctx.fillRect(30 * UNIT, 25 * UNIT, 1 * UNIT, 1 * UNIT);
 }
 
 function drawLightGreen() {
