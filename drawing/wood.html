@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drawing Of Wood</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Drawing Of Wood</h1>
+    </header>
+    <nav>
+        <a href="alldrawings.html">Back</a>
+    </nav>
+    <section>
+        <br>
+        <canvas id="myCanvas" width="1000" height="1000"></canvas>
+    </section>
+    <footer>
+
+    </footer>
+    <script src="drawWoods.js"></script>
+    <script>
+        var canvas;
+        var ctx;
+        var UNIT = 6.25;
+
+        window.onload = init;
+
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+            // drawWood();
+            drawWoods(0,144,10);
+            // drawRuler(1);
+            ctx.save();
+            ctx.translate(200,706)
+            ctx.scale(-1,1);
+            drawSleepy();
+        }
+    </script>
+    <script src="ruler.js"></script>
+    <script src="drawSleepy.js"></script>
+</body>
+
+</html>
