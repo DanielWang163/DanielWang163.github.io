@@ -1,21 +1,19 @@
-function drawCharacter() {
-    drawBackground();
-    drawHat();
-    drawHead();
-    drawLeftarm();
-    drawClothe();
-    drawRightarm();
-    drawLegs();
-    drawLantern();
-    drawStick();
+function drawCharacter(x,y,scale) {
+    ctx.save();
+    ctx.translate(x,y);
+    ctx.scale(scale,scale)
+    drawHatOfCharacter();
+    drawHeadOfCharacter();
+    drawLeftarmOfCharacter();
+    drawClotheOfCharacter();
+    drawRightarmOfCharacter();
+    drawLegsOfCharacter();
+    drawLanternOfCharacter();
+    drawStickOfCharacter();
+    ctx.restore();
 }
 
-function drawBackground() {
-    ctx.fillStyle = "#323232"; 
-    ctx.fillRect(0 * UNIT, 0 * UNIT, canvas.width, canvas.height);
-}
-
-function drawHat() {
+function drawHatOfCharacter() {
     ctx.fillStyle = "#0F1922";
     ctx.fillRect(5 * UNIT, 4 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(6 * UNIT, 3 * UNIT, 1 * UNIT, 4 * UNIT);
@@ -50,7 +48,7 @@ function drawHat() {
     ctx.fillRect(24 * UNIT, 6 * UNIT, 1 * UNIT, 1 * UNIT);
 }
 
-function drawHead() {
+function drawHeadOfCharacter() {
     ctx.fillStyle = "black";
     ctx.fillRect(8 * UNIT, 14 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(9 * UNIT, 13 * UNIT, 1 * UNIT, 4 * UNIT);
@@ -69,7 +67,7 @@ function drawHead() {
     ctx.fillRect(15 * UNIT, 13 * UNIT, 1 * UNIT, 1 * UNIT);
 }
 
-function drawLeftarm() {
+function drawLeftarmOfCharacter() {
     ctx.fillStyle = "black";
     ctx.fillRect(0 * UNIT, 26 * UNIT, 4 * UNIT, 1 * UNIT);
     ctx.fillRect(0 * UNIT, 27 * UNIT, 4 * UNIT, 1 * UNIT);
@@ -88,7 +86,7 @@ function drawLeftarm() {
     ctx.fillRect(9 * UNIT, 23 * UNIT, 1 * UNIT, 1 * UNIT);
 }
 
-function drawClothe() {
+function drawClotheOfCharacter() {
     ctx.fillStyle = "#0F1922";
     ctx.fillRect(7 * UNIT, 16 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(8 * UNIT, 17 * UNIT, 1 * UNIT, 2 * UNIT);
@@ -163,7 +161,7 @@ function drawClothe() {
     ctx.fillRect(25 * UNIT, 29 * UNIT, 1 * UNIT, 2 * UNIT);
 }
 
-function drawRightarm() {
+function drawRightarmOfCharacter() {
     ctx.fillStyle = "#B8B8B8";
     ctx.fillRect(20 * UNIT, 17 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(21 * UNIT, 16 * UNIT, 1 * UNIT, 3 * UNIT);
@@ -186,7 +184,7 @@ function drawRightarm() {
     ctx.fillRect(29 * UNIT, 20 * UNIT, 3 * UNIT, 3 * UNIT);
 }
 
-function drawLegs() {
+function drawLegsOfCharacter() {
     ctx.fillStyle = "#330504";
     ctx.fillRect(17 * UNIT, 29 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(11 * UNIT, 30 * UNIT, 9 * UNIT, 1 * UNIT);
@@ -218,7 +216,7 @@ function drawLegs() {
     ctx.fillRect(14 * UNIT, 38 * UNIT, 1 * UNIT, 1 * UNIT);
 }
 
-function drawLantern() {
+function drawLanternOfCharacter() {
     ctx.fillStyle = "#1E1E1E";
     ctx.fillRect(29 * UNIT, 23 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(32 * UNIT, 21 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -248,7 +246,7 @@ function drawLantern() {
     ctx.fillRect(29 * UNIT, 34 * UNIT, 6 * UNIT, 1 * UNIT); 
 }
 
-function drawStick() {
+function drawStickOfCharacter() {
     ctx.fillStyle = "#5C250F";
     ctx.fillRect(1 * UNIT, 28 * UNIT, 1 * UNIT, 15 * UNIT);
 }

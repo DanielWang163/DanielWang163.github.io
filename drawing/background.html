@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <title>Drawing Of Wood</title>
+    <title>Drawing Of Some 王者荣耀 Stuff</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <header>
-        <h1>Drawing Of Wood</h1>
+        <h1>Drawing Of Some 王者荣耀 Stuff</h1>
     </header>
     <nav>
         <a href="alldrawings.html">Back</a>
@@ -21,6 +21,9 @@
 
     </footer>
     <script src="drawWoods.js"></script>
+    <script src="drawFortuneTeller.js"></script>
+    <script src="drawCharacter.js"></script>
+    <script src="drawAdidas.js"></script>
     <script>
         var canvas;
         var ctx;
@@ -31,15 +34,25 @@
         function init() {
             canvas = document.getElementById("myCanvas");
             ctx = canvas.getContext("2d");
-            // drawWood();
+            drawBackground();
+            drawBricks();
+            drawCharacters();
+        }
+
+        function drawCharacters() {
+            drawFortuneTeller(10,450,1);
+            drawSleepy(300,590,1.6);
+            drawCharacter(620,470,1.6);
+            drawAdidas(380,860,0.1)
+        }
+
+        function drawBricks() {
             drawWoods(0,144,10);
-            // drawWood();
-            // drawRuler(1);
-            ctx.save();
-            ctx.translate(200,706)
-            ctx.scale(-1,1);
-            drawSleepy();
-            ctx.restore();
+        }
+
+        function drawBackground() {
+            ctx.fillStyle = "#7997EC"
+            ctx.fillRect(0 * UNIT, 0 * UNIT, canvas.width, canvas.height);
         }
     </script>
     <script src="ruler.js"></script>

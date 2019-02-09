@@ -1,4 +1,7 @@
-function drawAdidas() {
+function drawAdidas(x,y,scale) {
+    ctx.save();
+    ctx.translate(x,y);
+    ctx.scale(scale,scale)
     // drawRuler(3);
     ctx.fillStyle = "black";
     // 1st
@@ -49,4 +52,5 @@ function drawAdidas() {
     ctx.fillRect(93 * UNIT, 42 * UNIT, 3 * UNIT, 9 * UNIT);
     ctx.fillRect(96 * UNIT, 45 * UNIT, 3 * UNIT, 6 * UNIT);
     ctx.fillRect(99 * UNIT, 48 * UNIT, 3 * UNIT, 3 * UNIT);
+    ctx.restore();
 }

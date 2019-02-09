@@ -1,14 +1,18 @@
-function drawFortuneTeller() {
-    drawFan();
-    drawHair();
-    drawFace();
-    drawBody();
-    drawLegs();
+function drawFortuneTeller(x,y,scale) {
+    ctx.save();
+    ctx.translate(x,y);
+    ctx.scale(scale,scale);
+    drawFanOfFortuneTeller();
+    drawHairOfFortuneTeller();
+    drawFaceOfFortuneTeller();
+    drawBodyOfFortuneTeller();
+    drawLegsOfFortuneTeller();
+    ctx.restore();
 }
 
 
 
-function drawFan() {
+function drawFanOfFortuneTeller() {
     ctx.fillStyle = "#5184F7"; // Dark blue
     ctx.fillRect(0 * UNIT, 27 * UNIT, 1 * UNIT, 3 * UNIT);
     ctx.fillRect(1 * UNIT, 25 * UNIT, 1 * UNIT, 3 * UNIT);
@@ -136,7 +140,7 @@ function drawFan() {
 
 
 
-function drawHair() {
+function drawHairOfFortuneTeller() {
     ctx.fillStyle = "Black";
     ctx.fillRect(27 * UNIT, 0 * UNIT, 7 * UNIT, 1 * UNIT);
     ctx.fillRect(34 * UNIT, 1 * UNIT, 4 * UNIT, 1 * UNIT);
@@ -320,7 +324,7 @@ function drawHair() {
 
 
 
-function drawFace() {
+function drawFaceOfFortuneTeller() {
     ctx.fillStyle = "#D1A396"; // Dark skin
     ctx.fillRect(22 * UNIT, 18 * UNIT, 8 * UNIT, 1 * UNIT);
     ctx.fillRect(31 * UNIT, 18 * UNIT, 5 * UNIT, 1 * UNIT);
@@ -396,7 +400,7 @@ function drawFace() {
 
 
 
-function drawBody() {
+function drawBodyOfFortuneTeller() {
     ctx.fillStyle = "black"; // Black
     ctx.fillRect(37 * UNIT, 29 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(27 * UNIT, 30 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -567,7 +571,7 @@ function drawBody() {
 
 
 
-function drawLegs() {
+function drawLegsOfFortuneTeller() {
     ctx.fillStyle = "black" // Black
     ctx.fillRect(26 * UNIT, 47 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(38* UNIT, 47 * UNIT, 1 * UNIT, 1 * UNIT);
