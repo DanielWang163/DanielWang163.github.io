@@ -23,13 +23,15 @@
     <script>
         var canvas;
         var ctx;
-        var UNIT = 10;
+        var UNIT = 62.5;
 
         window.onload = init;
 
         function init() {
             canvas = document.getElementById("myCanvas");
             ctx = canvas.getContext("2d");
+            // drawGrounds(0,84,10);
+            drawGrounds(0, 0, 1);
         }
     </script>
     <script src="ruler.js"></script>

@@ -1,7 +1,7 @@
 function drawWoods(x, y, numWoods) {
-    // For loop
+    // For
     for (var i = 0; i < numWoods; i++) {
-        // In the first, 1 equals 0.
+        // In the first loop, 1 equals 0.
         // In the second loop, i equals 1.
         // In the third loop, i equals 2.
         // In the forth loop, i equals 3.
@@ -110,21 +110,6 @@ function drawWood() {
     ctx.fillRect(9 * UNIT, 12 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(2 * UNIT, 13 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(11 * UNIT, 14 * UNIT, 1 * UNIT, 1 * UNIT);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     ctx.fillRect(0 * UNIT, 3 * UNIT, 16 * UNIT, 1 * UNIT);
     ctx.fillRect(0 * UNIT, 7 * UNIT, 16 * UNIT, 1 * UNIT);
     ctx.fillRect(0 * UNIT, 11 * UNIT, 16 * UNIT, 1 * UNIT);
