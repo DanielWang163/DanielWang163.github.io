@@ -2,13 +2,13 @@
 <html>
 
 <head>
-    <title>Drawing Of Main Charater</title>
+    <title>Drawing Of Main Charater Move Animation Frames</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
     <header>
-        <h1>Drawing Of Main Character</h1>
+        <h1>Drawing Of Main Character Move Animation Frames</h1>
     </header>
     <nav>
         <a href="alldrawings.html">Back</a>
@@ -23,18 +23,18 @@
     <script>
         var canvas;
         var ctx;
-        var UNIT = 25;
+        var UNIT = 20;
 
         window.onload = init;
 
         function init() {
             canvas = document.getElementById("myCanvas");
             ctx = canvas.getContext("2d");
-            drawMainCharacter();
+            drawMainCharacterMove();
         }
     </script>
     <script src="ruler.js"></script>
-    <script src="drawMainCharacter.js"></script>
+    <script src="drawMainCharacterMove.js"></script>
 </body>
 
 </html>

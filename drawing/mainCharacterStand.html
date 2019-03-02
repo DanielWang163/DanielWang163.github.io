@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drawing Of Main Charater Stand Animation Frames</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Drawing Of Main Character Stand Animation Frames</h1>
+    </header>
+    <nav>
+        <a href="alldrawings.html">Back</a>
+    </nav>
+    <section>
+        <br>
+        <canvas id="myCanvas" width="1000" height="1000"></canvas>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        var canvas;
+        var ctx;
+        var UNIT = 10;
+
+        window.onload = init;
+
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+            drawMainCharacterStand();
+        }
+    </script>
+    <script src="ruler.js"></script>
+    <script src="drawMainCharacterStand.js"></script>
+</body>
+
+</html>
