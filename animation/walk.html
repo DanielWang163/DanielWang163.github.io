@@ -25,8 +25,10 @@
         var ctx;
         var requestId;
         var positionX = -48;
+        var positionXFortuneTeller = 0;
+        var positionYFortuneTeller = 0;
         var time = 0;
-        const MAX_TIME = 60;
+        const MAX_TIME = 59;
         const UNIT = 4;
 
         window.onload = init;
@@ -47,6 +49,9 @@
             animateMainCharacterMove(positionX, 186.5, 1);
             changePositionX();
             changeTime();
+            animateFortuneTeller();
+            changePositionXFortuneTeller();
+            changePositionYFortuneTeller();
             requestId = requestAnimationFrame(animationLoop);
         }
 
@@ -87,9 +92,42 @@
                 time += 1;
             }
         }
+
+        function animateFortuneTeller() {
+            drawFortuneTeller(positionXFortuneTeller, positionYFortuneTeller, 0.75)
+        }
+
+        function changePositionXFortuneTeller() {
+            if (positionXFortuneTeller <= -184) {
+                positionXFortuneTeller = 1000;
+            } else {
+                positionXFortuneTeller -= 3;
+            }
+        }
+
+        function changePositionYFortuneTeller() {
+            if (0 <= time && time <= 7.5) {
+                positionYFortuneTeller = 705
+            } else if (7.6 <= time && time <= 15) {
+                positionYFortuneTeller = 700
+            } else if (15.1 <= time && time <= 22.5) {
+                positionYFortuneTeller = 695
+            } else if (22.6 <= time && time <= 29) {
+                positionYFortuneTeller = 690
+            } else if (29.1 <= time && time <= 36.5) {
+                positionYFortuneTeller = 690
+            } else if (36.6 <= time && time <= 44) {
+                positionYFortuneTeller = 695
+            } else if (44.1 <= time && time <= 51.5) {
+                positionYFortuneTeller = 700
+            } else if (51.6 <= time && time <= 59) {
+                positionYFortuneTeller = 705
+            }
+        }
     </script>
     <script src="../drawing/drawWoods.js"></script>
     <script src="../drawing/drawMainCharacterMove.js"></script>
+    <script src="../drawing/drawFortuneTeller.js"></script>
 </body>
 
 </html>
