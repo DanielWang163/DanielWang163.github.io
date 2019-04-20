@@ -2,19 +2,38 @@ function drawMainCharacterMove(x, y, scale) {
     ctx.save();
     ctx.translate(x * UNIT, y * UNIT);
     ctx.scale(scale, scale);
-    // drawMainCharacterMove1();
+    drawMainCharacterMove1();
     // drawMainCharacterMove2();
     // drawMainCharacterMove3();
     // drawMainCharacterMove4();
     // drawMainCharacterMove5();
-    drawMainCharacterMove6();
+    // drawMainCharacterMove6();
+    ctx.restore();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 function drawMainCharacterMove1(x, y, scale) {
     ctx.save();
     ctx.translate(x * UNIT, y * UNIT);
     ctx.scale(scale, scale);
-    drawRuler(1)
     ctx.fillStyle = "#92C1F3";
     ctx.fillRect(35 * UNIT, 2 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(37 * UNIT, 3 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -512,15 +531,10 @@ function drawMainCharacterMove1(x, y, scale) {
 
 
 
-
-
-
-
 function drawMainCharacterMove2(x, y, scale) {
     ctx.save();
     ctx.translate(x * UNIT, y * UNIT);
     ctx.scale(scale, scale);
-    drawRuler(1)
     // Hair
     ctx.fillStyle = "#92C1F3";
     ctx.fillRect(33 * UNIT, 6 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -958,14 +972,10 @@ function drawMainCharacterMove2(x, y, scale) {
 
 
 
-
-
-
 function drawMainCharacterMove3(x, y, scale) {
     ctx.save();
     ctx.translate(x * UNIT, y * UNIT);
     ctx.scale(scale, scale);
-    drawRuler(1)
     // Hair
     ctx.fillStyle = "#92C1F3";
     ctx.fillRect(37 * UNIT, 2 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -1252,8 +1262,6 @@ function drawMainCharacterMove3(x, y, scale) {
     ctx.fillRect(23 * UNIT, 19 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillStyle = "#6755A8";
     ctx.fillRect(23 * UNIT, 20 * UNIT, 1 * UNIT, 1 * UNIT);
-    // ctx.fillStyle = "#E5E5E5";
-    // ctx.fillRect(23 * UNIT, 21 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillStyle = "#6AF0E2";
     ctx.fillRect(20 * UNIT, 25 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(21 * UNIT, 24 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -1471,7 +1479,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.save();
     ctx.translate(x * UNIT, y * UNIT);
     ctx.scale(scale, scale);
-    drawRuler(1)
     ctx.fillStyle = "#92C1F3";
     ctx.fillRect(35 * UNIT, 2 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(37 * UNIT, 3 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -1543,7 +1550,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(39 * UNIT, 16 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(40 * UNIT, 15 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(41 * UNIT, 13 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillRect(25 * UNIT, 17 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(28 * UNIT, 17 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(26 * UNIT, 16 * UNIT, 2 * UNIT, 1 * UNIT);
@@ -1641,8 +1647,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillStyle = "#FEF2CC";
     ctx.fillRect(34 * UNIT, 15 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(32 * UNIT, 16 * UNIT, 5 * UNIT, 2 * UNIT);
-
- 
     ctx.fillStyle = "#1B242A";
     ctx.fillRect(31 * UNIT, 17 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(30 * UNIT, 18 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -1675,7 +1679,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(29 * UNIT, 22 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(31 * UNIT, 20 * UNIT, 1 * UNIT, 4 * UNIT);
     ctx.fillRect(32 * UNIT, 23 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#A9B3C9";
     ctx.fillRect(20 * UNIT, 16 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(21 * UNIT, 17 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -1685,7 +1688,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(26 * UNIT, 18 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(32 * UNIT, 22 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(33 * UNIT, 23 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#C4CEDE";
     ctx.fillRect(18 * UNIT, 15 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(21 * UNIT, 16 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -1702,7 +1704,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(29 * UNIT, 20 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(29 * UNIT, 21 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(21 * UNIT, 19 * UNIT, 1 * UNIT, 1 * UNIT);
-
     // Body
     ctx.fillStyle = "#1B242A";
     ctx.fillRect(18 * UNIT, 20 * UNIT, 2 * UNIT, 1 * UNIT);
@@ -1719,7 +1720,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(22 * UNIT, 27 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(30 * UNIT, 24 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(31 * UNIT, 25 * UNIT, 2 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#28343C";
     ctx.fillRect(19 * UNIT, 21 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(23 * UNIT, 23 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -1738,7 +1738,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(36 * UNIT, 28 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(34 * UNIT, 27 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(33 * UNIT, 28 * UNIT, 3 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#37434B";
     ctx.fillRect(20 * UNIT, 21 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(29 * UNIT, 24 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -1746,17 +1745,14 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(27 * UNIT, 26 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(25 * UNIT, 27 * UNIT, 3 * UNIT, 1 * UNIT);
     ctx.fillRect(23 * UNIT, 29 * UNIT, 3 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#EDBBAA";
     ctx.fillRect(20 * UNIT, 19 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(20 * UNIT, 20 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(33 * UNIT, 26 * UNIT, 2 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#C38C8C";
     ctx.fillRect(19 * UNIT, 19 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(32 * UNIT, 26 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(33 * UNIT, 27 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#FEF2CC";
     ctx.fillRect(22 * UNIT, 20 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(21 * UNIT, 21 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -1807,7 +1803,7 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillStyle = "#323232";
     ctx.fillRect(22 * UNIT, 21 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(21 * UNIT, 22 * UNIT, 2 * UNIT, 1 * UNIT);
-    // Legs / 腿
+    // Legs
     ctx.fillStyle = "#403A66";
     ctx.fillRect(18 * UNIT, 27 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(18 * UNIT, 28 * UNIT, 2 * UNIT, 1 * UNIT);
@@ -1840,9 +1836,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(38 * UNIT, 44 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(39 * UNIT, 43 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(41 * UNIT, 42 * UNIT, 1 * UNIT, 1 * UNIT);
-
- 
-
     ctx.fillStyle = "#4B4E78";
     ctx.fillRect(21 * UNIT, 30 * UNIT, 4 * UNIT, 1 * UNIT);
     ctx.fillRect(20 * UNIT, 31 * UNIT, 3 * UNIT, 1 * UNIT);
@@ -1873,7 +1866,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(35 * UNIT, 44 * UNIT, 3 * UNIT, 1 * UNIT);
     ctx.fillRect(36 * UNIT, 43 * UNIT, 3 * UNIT, 1 * UNIT);
     ctx.fillRect(39 * UNIT, 42 * UNIT, 2 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#596D88";
     ctx.fillRect(9 * UNIT, 37 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(8 * UNIT, 38 * UNIT, 1 * UNIT, 3 * UNIT);
@@ -1897,7 +1889,6 @@ function drawMainCharacterMove4(x, y, scale) {
     ctx.fillRect(35 * UNIT, 40 * UNIT, 1 * UNIT, 3 * UNIT);
     ctx.fillRect(37 * UNIT, 42 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(39 * UNIT, 41 * UNIT, 3 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#6A8C96";
     ctx.fillRect(9 * UNIT, 43 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(10 * UNIT, 42 * UNIT, 1 * UNIT, 2 * UNIT);
@@ -1963,12 +1954,10 @@ function drawMainCharacterMove4(x, y, scale) {
 
 
 
-
 function drawMainCharacterMove5(x, y, scale) {
     ctx.save();
     ctx.translate(x * UNIT, y * UNIT);
     ctx.scale(scale, scale);
-    drawRuler(1)
     // Hair
     ctx.fillStyle = "#92C1F3";
     ctx.fillRect(33 * UNIT, 6 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -2244,7 +2233,6 @@ function drawMainCharacterMove5(x, y, scale) {
     ctx.fillRect(18 * UNIT, 35 * UNIT, 4 * UNIT, 1 * UNIT);
     ctx.fillRect(17 * UNIT, 36 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(17 * UNIT, 38 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillRect(24 * UNIT, 34 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(26 * UNIT, 33 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(29 * UNIT, 33 * UNIT, 3 * UNIT, 1 * UNIT);
@@ -2380,8 +2368,7 @@ function drawMainCharacterMove5(x, y, scale) {
     ctx.fillRect(25 * UNIT, 37 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(26 * UNIT, 36 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(26 * UNIT, 34 * UNIT, 4 * UNIT, 1 * UNIT);
-
-    Shadow // 影子
+    // Shadow
     ctx.fillStyle = "#8F92B6";
     ctx.fillRect(8 * UNIT, 47 * UNIT, 12 * UNIT, 1 * UNIT);
     ctx.fillRect(28 * UNIT, 47 * UNIT, 6 * UNIT, 1 * UNIT);
@@ -2409,13 +2396,10 @@ function drawMainCharacterMove5(x, y, scale) {
 
 
 
-
-
 function drawMainCharacterMove6(x, y, scale) {
     ctx.save();
     ctx.translate(x * UNIT, y * UNIT);
     ctx.scale(scale, scale);
-    drawRuler(1)
     // Hair
     ctx.fillStyle = "#92C1F3";
     ctx.fillRect(37 * UNIT, 2 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -2465,7 +2449,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(40 * UNIT, 14 * UNIT, 3 * UNIT, 1 * UNIT);
     ctx.fillRect(41 * UNIT, 15 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(25 * UNIT, 13 * UNIT, 1 * UNIT, 2 * UNIT);
-
     ctx.fillRect(26 * UNIT, 15 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(25 * UNIT, 16 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(24 * UNIT, 17 * UNIT, 2 * UNIT, 1 * UNIT);
@@ -2492,7 +2475,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(26 * UNIT, 17 * UNIT, 5 * UNIT, 1 * UNIT);
     ctx.fillRect(30 * UNIT, 17 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(29 * UNIT, 18 * UNIT, 3 * UNIT, 1 * UNIT);
-
     // Headphones
     ctx.fillStyle = "#28343C";
     ctx.fillRect(30 * UNIT, 7 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -2601,7 +2583,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(30 * UNIT, 23 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(31 * UNIT, 24 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(32 * UNIT, 19 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#9093B7";
     ctx.fillRect(15 * UNIT, 14 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(16 * UNIT, 15 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -2609,7 +2590,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(18 * UNIT, 17 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(19 * UNIT, 18 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(20 * UNIT, 19 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillRect(28 * UNIT, 18 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(27 * UNIT, 19 * UNIT, 3 * UNIT, 1 * UNIT);
     ctx.fillRect(28 * UNIT, 20 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -2637,7 +2617,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(18 * UNIT, 15 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(20 * UNIT, 16 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(21 * UNIT, 17 * UNIT, 2 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#1B242A";
     ctx.fillRect(23 * UNIT, 18 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(23 * UNIT, 19 * UNIT, 2 * UNIT, 1 * UNIT);
@@ -2666,9 +2645,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillStyle = "#FEF2CC";
     ctx.fillRect(23 * UNIT, 21 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(36 * UNIT, 24 * UNIT, 1 * UNIT, 1 * UNIT);
-
-
-
     // Body
     ctx.fillStyle = "#1B242A";
     ctx.fillRect(20 * UNIT, 20 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -2683,7 +2659,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(21 * UNIT, 28 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(22 * UNIT, 29 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(26 * UNIT, 27 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#28343C";
     ctx.fillRect(21 * UNIT, 20 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(20 * UNIT, 21 * UNIT, 1 * UNIT, 2 * UNIT);
@@ -2700,7 +2675,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(20 * UNIT, 29 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(21 * UNIT, 31 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(22 * UNIT, 32 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#37434B";
     ctx.fillRect(21 * UNIT, 22 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(22 * UNIT, 21 * UNIT, 1 * UNIT, 2 * UNIT);
@@ -2709,16 +2683,12 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(27 * UNIT, 26 * UNIT, 3 * UNIT, 1 * UNIT);
     ctx.fillRect(25 * UNIT, 29 * UNIT, 3 * UNIT, 1 * UNIT);
     ctx.fillRect(36 * UNIT, 25 * UNIT, 1 * UNIT, 2 * UNIT);
-
-
-
     ctx.fillStyle = "#6AF0E2";
     ctx.fillRect(19 * UNIT, 24 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(18 * UNIT, 25 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(17 * UNIT, 26 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(37 * UNIT, 24 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(38 * UNIT, 26 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#4B4E78";
     ctx.fillRect(18 * UNIT, 22 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(18 * UNIT, 23 * UNIT, 1 * UNIT, 2 * UNIT);
@@ -2787,8 +2757,8 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(6 * UNIT, 42 * UNIT, 1 * UNIT, 2 * UNIT);
     ctx.fillRect(5 * UNIT, 43 * UNIT, 1 * UNIT, 3 * UNIT);
     ctx.fillRect(6 * UNIT, 46 * UNIT, 1 * UNIT, 1 * UNIT);
-    ctx.fillRect(7 * UNIT, 47 * UNIT, 1 * UNIT, 2 * UNIT);
-    ctx.fillRect(8 * UNIT, 49 * UNIT, 1 * UNIT, 1 * UNIT);
+    ctx.fillRect(7 * UNIT, 47 * UNIT, 1 * UNIT, 1 * UNIT);
+    ctx.fillRect(8 * UNIT, 48 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(23 * UNIT, 33 * UNIT, 3 * UNIT, 1 * UNIT);
     ctx.fillRect(26 * UNIT, 34 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(28 * UNIT, 36 * UNIT, 1 * UNIT, 2 * UNIT);
@@ -2800,7 +2770,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(26 * UNIT, 44 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(27 * UNIT, 45 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(28 * UNIT, 46 * UNIT, 1 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#4B4E78";
     ctx.fillRect(25 * UNIT, 30 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(24 * UNIT, 31 * UNIT, 2 * UNIT, 1 * UNIT);
@@ -2836,7 +2805,6 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(27 * UNIT, 44 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(28 * UNIT, 45 * UNIT, 2 * UNIT, 1 * UNIT);
     ctx.fillRect(29 * UNIT, 46 * UNIT, 2 * UNIT, 1 * UNIT);
-
     ctx.fillStyle = "#596D88";
     ctx.fillRect(23 * UNIT, 34 * UNIT, 1 * UNIT, 1 * UNIT);
     ctx.fillRect(22 * UNIT, 35 * UNIT, 1 * UNIT, 1 * UNIT);
@@ -2907,10 +2875,8 @@ function drawMainCharacterMove6(x, y, scale) {
     ctx.fillRect(28 * UNIT, 38 * UNIT, 1 * UNIT, 1 * UNIT);
     // Shadow
     ctx.fillStyle = "#8F92B6";
-
-    ctx.fillRect(13 * UNIT, 48 * UNIT, 23 * UNIT, 1 * UNIT);
-    ctx.fillRect(2 * UNIT, 49 * UNIT, 6 * UNIT, 1 * UNIT);
-    ctx.fillRect(12 * UNIT, 49 * UNIT, 31 * UNIT, 1 * UNIT);
-    ctx.fillRect(8 * UNIT, 50 * UNIT, 29 * UNIT, 1 * UNIT);
+    ctx.fillRect(8 * UNIT, 47 * UNIT, 28 * UNIT, 1 * UNIT);
+    ctx.fillRect(0 * UNIT, 48 * UNIT, 46 * UNIT, 1 * UNIT);
+    ctx.fillRect(8 * UNIT, 49 * UNIT, 28 * UNIT, 1 * UNIT);
     ctx.restore();
 }

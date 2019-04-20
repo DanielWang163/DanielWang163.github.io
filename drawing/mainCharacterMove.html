@@ -23,14 +23,19 @@
     <script>
         var canvas;
         var ctx;
-        var UNIT = 20;
+        var UNIT = 6;
 
         window.onload = init;
 
         function init() {
             canvas = document.getElementById("myCanvas");
             ctx = canvas.getContext("2d");
-            drawMainCharacterMove();
+            drawMainCharacterMove1(0, 0, 1);
+            drawMainCharacterMove2(50, 0, 1);
+            drawMainCharacterMove3(100, 0, 1);
+            drawMainCharacterMove4(0, 50, 1);
+            drawMainCharacterMove5(50, 50, 1);
+            drawMainCharacterMove6(100, 50, 1);
         }
     </script>
     <script src="ruler.js"></script>
