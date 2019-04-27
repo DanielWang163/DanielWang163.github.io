@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jump</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Jump</h1>
+    </header>
+    <nav>
+        <a href="animation.html">Back</a>
+    </nav>
+    <section>
+        <br>
+        <canvas id="myCanvas" width="1000" height="1000"></canvas>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var positionX = -48;
+        var positionY = 186.5;
+        var time = 0;
+        var isJumping = false;
+        const JUMP_POINT = 50;
+        const PEAK_POINT = 100;
+        const LAND_POINT = 151;
+        const MAX_TIME = 59;
+        const UNIT = 4;
+
+        window.onload = init;
+
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+            startAnimation();
+        }
+
+        function startAnimation() {
+            requestId = requestAnimationFrame(animationLoop);
+        }
+
+        function animationLoop(timeStamp) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBackground();
+            animateMainCharacterMove();
+            changePositionX();
+            changepositionY();
+            changeTime();
+            requestId = requestAnimationFrame(animationLoop);
+        }
+
+        function drawBackground() {
+            ctx.fillStyle = "pink";
+            ctx.fillRect(0, 0, canvas.width, canvas.height)
+            drawWoods(0, 235, 16);
+        }
+
+        function changePositionX() {
+            if (positionX >= canvas.width / UNIT) {
+                positionX = -48;
+            } else {
+                positionX += 1;
+            }
+        }
+
+        function changepositionY() {
+            if ((JUMP_POINT <= positionX) && (positionX <= PEAK_POINT)) {
+                positionY /= 1.025;
+                isJumping = true;
+            } else if ((PEAK_POINT <= positionX) && (positionX <= LAND_POINT)) {
+                positionY *= 1.025;
+                isJumping = true;
+            } else {
+                isJumping = false;
+            }
+        }
+
+        function animateMainCharacterMove() {
+            if (isJumping == true) {
+                drawMainCharacterMove3(positionX, positionY);
+            } else {
+                drawMainCharacterMove1(positionX, positionY);
+            }
+        }
+
+        function changeTime() {
+            if (time == MAX_TIME) {
+                time = 0;
+            } else {
+                time += 1;
+            }
+        }
+    </script>
+    <script src="../drawing/drawWoods.js"></script>
+    <script src="../drawing/drawMainCharacterMove.js"></script>
+</body>
+
+</html>
