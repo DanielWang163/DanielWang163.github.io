@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>All My Drawings</title>
-        <link rel="stylesheet" href="../style.css">
-    </head>
-    <body>
-        <header>
-            <h1>All My Drawings</h1>
-        </header>
-        <nav>
-            <a href="../index.html">Back</a>
-            <br>
-            <a href="rainbow.html">Rainbow</a>
-            <br>
-            <a href="adidasLogo.html">Adidas Logo</a>
-            <br>
-            <a href="reaper.html">Reaper</a>
-            <br>
-            <a href="character.html">Character</a>
-            <br>
-            <a href="fortuneTeller.html">Frotune Teller</a>
-            <br>
-            <a href="sleepy.html">Sleepy</a>
-            <br>
-            <a href="mainCharacterStand.html">Main Character Stand Animation Frames</a>
-            <br>
-            <a href="mainCharacterMove.html">Main Character Move Animation Frames</a>
-            <br>
-            <a href="wood.html">Wood</a>
-            <br>
-            <a href="ground.html">Ground</a>
-            <br>
-            <a href="background.html">Background</a>
-            <br>
-            <a href="translation.html">Translation</a>
-            <br>
-            <a href="scale.html">Scale</a>
-        </nav>
-        <section>
-        </section>
-        <footer>
 
-        </footer>
-    </body>
+<head>
+    <title>All My Drawings</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>All My Drawings</h1>
+    </header>
+    <nav>
+        <a href="../index.html">Back</a>
+        <br>
+        <a href="rainbow.html">Rainbow</a>
+        <br>
+        <a href="adidasLogo.html">Adidas Logo</a>
+        <br>
+        <a href="reaper.html">Reaper</a>
+        <br>
+        <a href="character.html">Character</a>
+        <br>
+        <a href="fortuneTeller.html">Frotune Teller</a>
+        <br>
+        <a href="sleepy.html">Sleepy</a>
+        <br>
+        <a href="mainCharacterStand.html">Main Character Stand Animation Frames</a>
+        <br>
+        <a href="mainCharacterMove.html">Main Character Move Animation Frames</a>
+        <br>
+        <a href="wood.html">Wood</a>
+        <br>
+        <a href="ground.html">Ground</a>
+        <br>
+        <a href="background.html">Background</a>
+        <br>
+        <a href="translation.html">Translation</a>
+        <br>
+        <a href="scale.html">Scale</a>
+    </nav>
+    <section>
+        <br>
+        <canvas id="myCanvas" width="1000" height="1000"></canvas>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+
+        var canvas;
+        var ctx;
+        var UNIT = 25;
+
+
+        window.onload = init;
+
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+            drawRip(0,0,1);
+            // drawRuler(1);
+        }
+    </script>
+    <script src="drawRip.js"></script>
+</body>
+
 </html>

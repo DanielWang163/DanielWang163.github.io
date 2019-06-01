@@ -33,7 +33,7 @@
         const LAND_POINT = 151;
         const MAX_TIME = 59;
         const UNIT = 4;
-
+        
         window.onload = init;
 
         function init() {
@@ -72,10 +72,10 @@
 
         function changepositionY() {
             if ((JUMP_POINT <= positionX) && (positionX <= PEAK_POINT)) {
-                positionY /= 1.025;
+                positionY /= 1.055;
                 isJumping = true;
             } else if ((PEAK_POINT <= positionX) && (positionX <= LAND_POINT)) {
-                positionY *= 1.025;
+                positionY *= 1.055;
                 isJumping = true;
             } else {
                 isJumping = false;

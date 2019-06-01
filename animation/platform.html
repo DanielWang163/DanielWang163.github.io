@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Platform</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Platform</h1>
+    </header>
+    <nav>
+        <a href="animation.html">Back</a>
+    </nav>
+    <section>
+        <br>
+        <canvas id="myCanvas" width="1000" height="1000"></canvas>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var positionX = 0;
+        var positionY = 199;
+        var isJumping = false;
+        var time = 0;
+        const MAX_TIME = 59;
+        const UNIT = 4;
+        const JUMP_POINT1 = 20;
+        const PEAK_POINT1 = 50;
+        const LAND_POINT1 = 70;
+        const JUMP_POINT2 = 152;
+        const PEAK_POINT2 = 1;
+        const LAND_POINT2 = 240;
+        const ACCELARATION = 1.025;
+
+        window.onload = init;
+
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+            startAnimation();
+        }
+
+        function startAnimation() {
+            requestId = requestAnimationFrame(animationLoop);
+        }
+
+        function animationLoop(timeStamp) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBackground();
+            animateMainCharacterMove();
+            changePositionX();
+            changePositionY();
+            // drawRuler(4);
+            changeTime();
+            requestId = requestAnimationFrame(animationLoop);
+        }
+
+        function drawBackground() {
+            ctx.fillStyle = "pink";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            drawWoods(0, 235, 16);
+            drawWoods(70, 187, 5);
+        }
+
+        function animateMainCharacterMove() {
+            if (0 <= time && time <= 9) {
+                drawMainCharacterMove1(positionX, positionY, 0.75);
+            } else if (10 <= time && time <= 19) {
+                drawMainCharacterMove2(positionX, positionY, 0.75);
+            } else if (20 <= time && time <= 29) {
+                drawMainCharacterMove3(positionX, positionY, 0.75);
+            } else if (30 <= time && time <= 39) {
+                drawMainCharacterMove4(positionX, positionY, 0.75);
+            } else if (40 <= time && time <= 49) {
+                drawMainCharacterMove5(positionX, positionY, 0.75);
+            } else if (50 <= time && time <= 59) {
+                drawMainCharacterMove6(positionX, positionY, 0.75);
+            }
+        }
+
+        function changePositionX() {
+            if (positionX >= canvas.width / UNIT) {
+                positionX = -48;
+            } else {
+                positionX += 1;
+            }
+        }
+
+        function changeTime() {
+            if (time == MAX_TIME) {
+                time = 0;
+            } else {
+                time += 1;
+            }
+        }
+
+        function changePositionY() {
+            if ((JUMP_POINT1 <= positionX) && (positionX <= PEAK_POINT1)) {
+                positionY /= ACCELARATION;
+                isJumping = true;
+            } else if ((PEAK_POINT1 <= positionX) && (positionX <= LAND_POINT1)) {
+                positionY *= ACCELARATION;
+                isJumping = true;
+            } else if ((JUMP_POINT2 <= positionX) && (positionX <= PEAK_POINT2)) {
+                positionY /= ACCELARATION;
+                isJumping = true;
+            } else if ((PEAK_POINT1 <= positionX) && (positionX <= LAND_POINT1)) {
+                positionY *= ACCELARATION;
+                isJumping = false;
+            } else {
+                isJumping = false;
+            }
+        }
+    </script>
+    <script src="../drawing/drawWoods.js"></script>
+    <script src="../drawing/drawMainCharacterMove.js"></script>
+    <script src="../drawing/ruler.js"></script>
+</body>
+
+</html>
