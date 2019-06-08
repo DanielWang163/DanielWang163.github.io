@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Walkk</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Walkk</h1>
+    </header>
+    <nav>
+        <a href="animation.html">Back</a>
+    </nav>
+    <section>
+        <br>
+        <canvas id="myCanvas" width="1000" height="1000"></canvas>
+    </section>
+    <footer>
+
+    </footer>
+    <script>
+        var canvas;
+        var ctx;
+        var requestId;
+        var isSleepyGoingRight = true;
+        var positionXSleepy = 225;
+        var positionYSleepy = 0;
+        var scaleSleepy = -1;
+        var positionXFortuneTeller = 184;
+        var positionYFortuneTeller = 0;
+        var time = 0;
+        const MAX_TIME = 59;
+        const UNIT = 4;
+
+        window.onload = init;
+
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            ctx = canvas.getContext("2d");
+            startAnimation();
+        }
+
+        function startAnimation() {
+            requestId = requestAnimationFrame(animationLoop);
+        }
+
+        function animationLoop(timeStamp) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawBackground();
+            animateSleepy();
+            changePositionXSleepy();
+            changeTime();
+            // animateFortuneTeller();
+            // changePositionYFortuneTeller();
+            drawRuler(5);
+            requestId = requestAnimationFrame(animationLoop);
+        }
+
+        function drawBackground() {
+            ctx.fillStyle = "grey";
+            ctx.fillRect(0, 0, canvas.width, canvas.height)
+            drawWoods(0, 235, 16);
+        }
+
+        function animateSleepy() {
+            drawSleepy(positionXSleepy, positionYSleepy, 1);
+            if (0 <= time && time <= 7.5) {
+                positionYSleepy = 805
+            } else if (7.6 <= time && time <= 15) {
+                positionYSleepy = 805
+            } else if (15.1 <= time && time <= 22.5) {
+                positionYSleepy = 800
+            } else if (22.6 <= time && time <= 29) {
+                positionYSleepy = 795
+            } else if (29.1 <= time && time <= 36.5) {
+                positionYSleepy = 790
+            } else if (36.6 <= time && time <= 44) {
+                positionYSleepy = 790
+            } else if (44.1 <= time && time <= 51.5) {
+                positionYSleepy = 795
+            } else if (51.6 <= time && time <= 59) {
+                positionYSleepy = 800
+            }
+        }
+
+        function changePositionXSleepy() {
+            // if ( positionXSleepy <= ) {
+            //     positionXSleepy += 2.75;
+            //     scaleSleepy = 1;
+            // } else if ( positionXSleepy >= positionXFortuneTeller ) {
+            //     positionXSleepy -= 2.75;
+            //     scaleSleepy = -1;
+            // }
+            if (isSleepyGoingRight == true ) {
+                if (positionXSleepy > 700) {
+                    isSleepyGoingRight = false;
+                    // scaleSleepy = 1;
+                } else {
+                    positionXSleepy += 2.75;
+                }
+            } else {
+                if (positionXSleepy < 225) {
+                    isSleepyGoingRight = true;
+                    // scaleSleepy = -1;
+                } else {
+                    positionXSleepy -= 2.75;
+                }
+            }
+        }
+
+        function changeTime() {
+            if (time == MAX_TIME) {
+                time = 0;
+            } else {
+                time += 1;
+            }
+        }
+
+        function animateFortuneTeller() {
+            drawFortuneTeller(positionXFortuneTeller, positionYFortuneTeller, 0.75,)
+            if (positionXSleepy >= 200) {
+
+            } else if (positionXSleepy <= 80) {
+
+            }
+        }
+
+        function changePositionYFortuneTeller() {
+            if (0 <= time && time <= 7.5) {
+                positionYFortuneTeller = 705
+            } else if (7.6 <= time && time <= 15) {
+                positionYFortuneTeller = 700
+            } else if (15.1 <= time && time <= 22.5) {
+                positionYFortuneTeller = 695
+            } else if (22.6 <= time && time <= 29) {
+                positionYFortuneTeller = 690
+            } else if (29.1 <= time && time <= 36.5) {
+                positionYFortuneTeller = 690
+            } else if (36.6 <= time && time <= 44) {
+                positionYFortuneTeller = 695
+            } else if (44.1 <= time && time <= 51.5) {
+                positionYFortuneTeller = 700
+            } else if (51.6 <= time && time <= 59) {
+                positionYFortuneTeller = 705
+            }
+        }
+    </script>
+    <script src="../drawing/drawWoods.js"></script>
+    <script src="../drawing/drawSleepy.js"></script>
+    <script src="../drawing/drawFortuneTeller.js"></script>
+    <script src="../drawing/ruler.js"></script>
+</body>
+
+</html>

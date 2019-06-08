@@ -1,7 +1,8 @@
-function drawFortuneTeller(x,y,scale) {
+function drawFortuneTeller(x,y,scale,translate) {
     ctx.save();
-    ctx.translate(x,y);
     ctx.scale(scale,scale);
+    ctx.translate(x,y);
+    ctx.translate(translate*UNIT,translate*UNIT);
     drawFanOfFortuneTeller();
     drawHairOfFortuneTeller();
     drawFaceOfFortuneTeller();

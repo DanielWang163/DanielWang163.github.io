@@ -33,9 +33,9 @@
         const JUMP_POINT1 = 20;
         const PEAK_POINT1 = 50;
         const LAND_POINT1 = 70;
-        const JUMP_POINT2 = 152;
-        const PEAK_POINT2 = 1;
-        const LAND_POINT2 = 240;
+        const JUMP_POINT2 = 111;
+        const PEAK_POINT2 = 139;
+        const LAND_POINT2 = 179;
         const ACCELARATION = 1.025;
 
         window.onload = init;
@@ -110,7 +110,7 @@
             } else if ((JUMP_POINT2 <= positionX) && (positionX <= PEAK_POINT2)) {
                 positionY /= ACCELARATION;
                 isJumping = true;
-            } else if ((PEAK_POINT1 <= positionX) && (positionX <= LAND_POINT1)) {
+            } else if ((PEAK_POINT2 <= positionX) && (positionX <= LAND_POINT2)) {
                 positionY *= ACCELARATION;
                 isJumping = false;
             } else {
