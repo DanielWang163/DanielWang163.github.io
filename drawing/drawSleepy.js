@@ -1,7 +1,7 @@
 function drawSleepy(x,y,scale) {
     ctx.save();
     ctx.translate(x,y);
-    ctx.scale(scale,scale)
+    ctx.scale(scale,1)
     drawOutlineOfSleepy();
     drawLightGreenOfSleepy();
     drawDarkGreenOfSleepy();
