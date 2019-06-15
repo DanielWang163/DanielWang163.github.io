@@ -27,6 +27,7 @@
         var isSleepyGoingRight = true;
         var positionXSleepy = 225;
         var positionYSleepy = 0;
+        var scaleSleepy = -1;
         var positionXFortuneTeller = 700;
         var positionYFortuneTeller = 0;
         var time = 0;
@@ -53,7 +54,6 @@
             changeTime();
             animateFortuneTeller();
             changePositionYFortuneTeller();
-            drawRuler(5);
             requestId = requestAnimationFrame(animationLoop);
         }
 
@@ -64,7 +64,7 @@
         }
 
         function animateSleepy() {
-            drawSleepy(positionXSleepy, positionYSleepy, );
+            drawSleepy(positionXSleepy, positionYSleepy, scaleSleepy);
             if (0 <= time && time <= 7.5) {
                 positionYSleepy = 805
             } else if (7.6 <= time && time <= 15) {
@@ -88,12 +88,14 @@
             if (isSleepyGoingRight == true ) {
                 if (positionXSleepy >= 700) {
                     isSleepyGoingRight = false;
+                    scaleSleepy = 1;
                 } else {
                     positionXSleepy += 2.75;
                 }
             } else {
                 if (positionXSleepy <= 225) {
                     isSleepyGoingRight = true;
+                    scaleSleepy = -1;
                 } else {
                     positionXSleepy -= 2.75;
                 }
